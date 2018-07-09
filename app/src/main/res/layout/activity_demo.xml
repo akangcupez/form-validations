@@ -8,19 +8,29 @@
     tools:context=".DemoActivity">
 
     <EditText
-        android:id="@+id/edit_text_1"
+        android:id="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/edit_text_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:hint="Email"
-        android:inputType="text"
-        tools:ignore="HardcodedText,LabelFor" />
+        android:hint="Password"
+        android:inputType="textPassword"
+        tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button_1"
+        android:id="@+id/button_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="submitClick"
+        android:onClick="buttonSubmitClick"
         android:text="Submit"
         tools:ignore="HardcodedText" />
 

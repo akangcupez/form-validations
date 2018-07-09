@@ -10,9 +10,13 @@ import com.akangcupez.formvalidation.FormValidation;
 import com.akangcupez.formvalidation.rule.Rule;
 import com.akangcupez.formvalidation.rule.RuleType;
 
+/**
+ * @author Aji Subastian (akangcupez@gmail.com)
+ */
 public class DemoActivity extends AppCompatActivity implements FormValidation.ValidationCallback {
 
-    private EditText editText1;
+    private EditText editTextEmail;
+    private EditText editTextPassword;
     private FormValidation formValidation;
 
     @Override
@@ -20,28 +24,39 @@ public class DemoActivity extends AppCompatActivity implements FormValidation.Va
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
 
-        editText1 = findViewById(R.id.edit_text_1);
+        editTextEmail = findViewById(R.id.edit_text_email);
+        editTextPassword = findViewById(R.id.edit_text_password);
+
         formValidation = new FormValidation(this);
         formValidation.setCallback(this);
     }
 
-    public void submitClick(View view) {
+    public void buttonSubmitClick(View view) {
 
-        Rule rule1 = new Rule.Builder().add(RuleType.REQUIRED).create();
+        Rule ruleEmail = new Rule.Builder()
+                .add(RuleType.REQUIRED)
+                .add(RuleType.VALID_EMAIL)
+                .create();
+
+        Rule rulePassword = new Rule.Builder()
+                .add(RuleType.REQUIRED)
+                .add(RuleType.BETWEEN_LENGTH, 6, 12)
+                .create();
 
         formValidation
                 .start()
-                .validate(editText1, rule1)
+                .validate(editTextEmail, ruleEmail)
+                .validate(editTextPassword, rulePassword)
                 .end();
     }
 
     @Override
     public void onValidationSuccess() {
-        Toast.makeText(getApplicationContext(), "SUCCESS", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "VALIDATION SUCCESS", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onValidationError() {
-        Toast.makeText(getApplicationContext(), "ERROR", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "VALIDATION ERROR", Toast.LENGTH_SHORT).show();
     }
 }

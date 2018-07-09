@@ -3,7 +3,7 @@ package com.akangcupez.formvalidation.rule;
 /**
  * @author Aji Subastian (akangcupez@gmail.com)
  */
-@SuppressWarnings({"unused"})
+@SuppressWarnings({"WeakerAccess, unused"})
 public class RuleEntity {
 
     private RuleType rt;
