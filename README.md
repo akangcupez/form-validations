@@ -1,3 +1,5 @@
+[![](https://www.jitpack.io/v/akangcupez/form-validations.svg)](https://www.jitpack.io/#akangcupez/form-validations)
+
 # Android Form Validations
 An android validation library. Currently only EditText and TextInputLayout are supported. This library is intended to reduce boilerplate in validating input form.
 
