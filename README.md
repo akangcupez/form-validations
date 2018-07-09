@@ -1,13 +1,17 @@
 # Android Form Validations
-An android validation library. Currently only EditText and TextInputLayout are supported. This library is intended to reduce code boiler-plate in validating input form.
+An android validation library. Currently only EditText and TextInputLayout are supported. This library is intended to reduce boilerplate in validating input form.
 
 ## Features
 - Support EditText and TextInputLayout
-- Support stack-validation rules
+- Support stacked-validation rules
 - Auto-focus on first error view which is defined in validation process chains
 - Display error text in multi-languages*
 - Display custom error text
-- Flexible validation using RegEx rule (coming soon)
+- Flexible validation using RegEx (coming soon)
+
+***Supported Languages:**
+- English
+- Indonesia
 
 ## Requirements
 - Android 4.2+ (SDK 17+)
@@ -25,7 +29,7 @@ allprojects {
 **STEP 2:** Add the dependency
 ```
 dependencies {
-    implementation 'com.github.akangcupez:form-validations:0.1.0'
+    implementation 'com.github.akangcupez:form-validations:0.1.1'
 }
 ```
 
@@ -82,5 +86,4 @@ public void buttonSubmitClick(View view) {
 Fork and send pull request
 
 ## License
----
 Copyright (c) 2018 Aji Subastian. See the [LICENSE](https://github.com/akangcupez/form-validations/blob/master/LICENSE)
