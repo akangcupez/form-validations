@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FormValidation</string>
+    <string name="czfv_field">Field</string>
+    <string name="czfv_required">%1$s is required</string>
+    <string name="czfv_exact_length">%1$s must be %2$s characters</string>
+    <string name="czfv_min_length">%1$s min. %2$s characters</string>
+    <string name="czfv_max_length">%1$s max. %2$s characters</string>
+    <string name="czfv_between_length">%1$s between %2$s and %3$s characters</string>
+    <string name="czfv_number">%1$s must be number</string>
+    <string name="czfv_decimal">%1$s must be decimal</string>
+    <string name="czfv_less_than">%1$s must less than %2$s</string>
+    <string name="czfv_greater_than">%1$s must greater than %2$s</string>
+    <string name="czfv_greater_than_or_equal">%1$s must greater than or equal to %2$s</string>
+    <string name="czfv_valid_email">%1$s must be a valid email address</string>
+    <string name="czfv_regex">%1$s not contains required format</string>
+</resources>

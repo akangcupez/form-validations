@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="czfv_field">Kolom</string>
+    <string name="czfv_required">%1$s harus diisi</string>
+    <string name="czfv_exact_length">%1$s harus %2$s karakter</string>
+    <string name="czfv_min_length">%1$s min. %2$s karakter</string>
+    <string name="czfv_max_length">%1$s max. %2$s karakter</string>
+    <string name="czfv_between_length">%1$s antara %2$s sampai %3$s karakter</string>
+    <string name="czfv_number">%1$s harus angka</string>
+    <string name="czfv_decimal">%1$s harus desimal</string>
+    <string name="czfv_less_than">%1$s must less than %2$s</string>
+    <string name="czfv_greater_than">%1$s must greater than %2$s</string>
+    <string name="czfv_greater_than_or_equal">%1$s must greater than or equal to %2$s</string>
+    <string name="czfv_valid_email">%1$s harus alamat email yang valid</string>
+    <string name="czfv_regex">%1$s tidak memenuhi format yang diperlukan</string>
+</resources>
