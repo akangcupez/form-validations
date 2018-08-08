@@ -40,11 +40,12 @@ public class FormValidation {
     }
 
     public void setCallback(ValidationCallback callback) {
-        if (sCallback == null) sCallback = callback;
+        sCallback = callback;
     }
 
+    @Deprecated
     public FormValidation addCallback(ValidationCallback callback) {
-        if (sCallback == null) sCallback = callback;
+        sCallback = callback;
         return this;
     }
 
@@ -154,6 +155,23 @@ public class FormValidation {
             else {
                 sCallback.onValidationError();
             }
+        }
+        else {
+            Log.e(TAG, "Validation Callback is Null");
+        }
+    }
+
+    public void end(ValidationCallback validationCallback) {
+        if (validationCallback != null) {
+            if (mResult) {
+                validationCallback.onValidationSuccess();
+            }
+            else {
+                validationCallback.onValidationError();
+            }
+        }
+        else {
+            Log.e(TAG, "Validation Callback is Null");
         }
     }
 
